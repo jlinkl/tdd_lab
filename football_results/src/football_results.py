@@ -7,5 +7,8 @@ def get_result(final_score):
         return "Draw"
 
 def get_results(final_scores):
-    pass
+    results = []
+    for score in final_scores:
+        results.append(get_result(score))
+    return results
     # (You could try and use a list comprehension for this)
