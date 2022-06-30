@@ -5,16 +5,22 @@ from src.compound_interest import CompoundInterest
 class CompoundInterestTest(unittest.TestCase):
 
     # Tests
+    def test_compound_interest(self):
 
     # Should return 732.81 given 100 principal, 10 percent, 20 years
+        self.assertEqual(732.81, CompoundInterest.do_compound_interest(100, 0.1, 20))
 
     # Should return 181.94 given 100 principal, 6 percent, 10 years
+        self.assertEqual(181.94, CompoundInterest.do_compound_interest(100, 0.06, 10))
 
     # Should return 149,058.55 given 100000 principal, 5 percent, 8 years
+        self.assertEqual(149058.55, CompoundInterest.do_compound_interest(100000, 0.05, 8))
 
     # Should return 0.00 given 0 principal, 10 percent, 1 year
+        self.assertEqual(0.00, CompoundInterest.do_compound_interest(0, 0.1, 1))
 
     # Should return 100.00 given 100 principal, 0 percent, 10 years
+        self.assertEqual(100.00, CompoundInterest.do_compound_interest(100, 0, 10))
 
 
     # Extention tests
